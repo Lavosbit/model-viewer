@@ -1,0 +1,19 @@
+commit f734e7ae3665474209d943bc5cfb99f28e3ba1c0
+Author: hybridherbst <herbst@prefrontalcortex.de>
+Date:   Sat Mar 5 01:49:57 2022 +0100
+
+    Workaround: parse animation index instead of falling back to 0 when animation name can't be found (#3225)
+    
+    * workaround: parse animation index instead of falling back to 0 when animation name can't be found
+    
+    * fixed end brace
+    
+    * started tests for duplicate animation names
+    
+    * added two more tests
+    
+    * add method to check if animation is playing by index, added two tests
+    
+    * reverted test wording
+    
+    * subtle underlying issue, not part of this PR: animations with the same name override the map, so the last, not the first, animation is playing...
